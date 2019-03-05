@@ -28,7 +28,7 @@ Check out our [Contributing Guide] for how to get started.
 
 # The List
 
-Nothing here yet...
+Nothing here yet....
 
 # Not Yet Awesome Item Template
 
