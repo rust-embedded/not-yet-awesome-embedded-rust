@@ -46,7 +46,10 @@ I'd like to be able to Foo using **only** a Bib, Bim, or Bap.
 
 ### Work in progress
 
-* The [foobar](https://crates.io/crates/foobar) has [Issue #1337](#) open to add support for Foo-ing with a Bim or Bap.
+* The [foobar](https://crates.io/crates/foobar) crate has [Issue #1337](#) open to add support for Foo-ing with a Bim or Bap.
+    * The `foobar` crate is on [on github](#)
+    * They are looking for contributors (see [issue #1338](#))
+    * They have a [Code of Conduct](CODE_OF_CONDUCT.md)
 
 # License
 
