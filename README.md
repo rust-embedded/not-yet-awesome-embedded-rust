@@ -26,29 +26,29 @@ Check out our [Contributing Guide] for how to get started.
 * Not Yet Awesome List
     * [nothing yet...](#)
 
-## Not Yet Awesome Item Template
-
-Here's an example for something that is not yet awesome:
-
-### It's Hard to Foo without a Bar
-
-#### Background
-
-[IETF RFC -1](#) states that you should be able to Foo with either a Bar, Bib, Bim, or Bap. However in all of [these](#) [rust](#) [crates](#), you're required to have a Bar!
-
-#### Success Criteria
-
-I'd like to be able to Foo using **only** a Bib, Bim, or Bap.
-
-#### Work in progress
-
-* The [foobar](https://crates.io/crates/foobar) has [Issue #1337](#) open to add support for Foo-ing with a Bim or Bap.
-
-## The List
+# The List
 
 Nothing here yet...
 
-## License
+# Not Yet Awesome Item Template
+
+Here's an example for something that is not yet awesome:
+
+## It's Hard to Foo without a Bar
+
+### Background
+
+[IETF RFC -1](#) states that you should be able to Foo with either a Bar, Bib, Bim, or Bap. However in all of [these](#) [rust](#) [crates](#), you're required to have a Bar!
+
+### Success Criteria
+
+I'd like to be able to Foo using **only** a Bib, Bim, or Bap.
+
+### Work in progress
+
+* The [foobar](https://crates.io/crates/foobar) has [Issue #1337](#) open to add support for Foo-ing with a Bim or Bap.
+
+# License
 
 The Not Yet Awesome Embedded Rust list (this project) is distributed under the terms of the Creative Commons [CC-BY-SA v4.0] license.
 
@@ -57,11 +57,11 @@ Copies of the license used by this project may also be found here: [CC-BY-SA v4.
 [CC-BY-SA v4.0]: ./LICENSE-CC-BY-SA
 [CC-BY-SA v4.0 Hosted]: https://creativecommons.org/licenses/by-sa/4.0/legalcode
 
-### Contribution
+## Contribution
 
 Unless you explicitly state otherwise, any contribution intentionally submitted for inclusion in the work by you shall be licensed as above, without any additional terms or conditions.
 
-## Code of Conduct
+# Code of Conduct
 
 Contribution to this crate is organized under the terms of the [Rust Code of
 Conduct][CoC], the maintainers of this crate, the [Resources team][team], promises
