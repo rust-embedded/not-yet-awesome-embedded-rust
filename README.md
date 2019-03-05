@@ -18,7 +18,27 @@ Check out our [Contributing Guide] for how to get started.
 
 [Contributing Guide]: CONTRIBUTING.md
 
-## Table of contents
+## The List Template
+
+Here's an example for something that is not yet awesome:
+
+### It's Hard to Foo without a Bar
+
+#### Background
+
+[IETF RFC -1](#) states that you should be able to Foo with either a Bar, Bib, Bim, or Bap. However in all of [these](#) [rust](#) [crates](#), you're required to have a Bar!
+
+#### Success Criteria
+
+I'd like to be able to Foo using **only** a Bib, Bim, or Bap.
+
+#### Work in progress
+
+* The [foobar](https://crates.io/crates/foobar) has [Issue #1337](#) open to add support for Foo-ing with a Bim or Bap.
+
+## The List
+
+Nothing here yet...
 
 ## License
 
