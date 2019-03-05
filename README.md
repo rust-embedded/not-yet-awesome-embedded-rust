@@ -1,4 +1,4 @@
-# Embedded Rust
+# Not *Yet* Awesome Embedded Rust
 
 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 
@@ -8,11 +8,21 @@ This is a collection of things that are **not yet** awesome in Embedded Rust.
 
 This project is developed and maintained by the [Resources team][team].
 
+Interested in:
+
+* Adding something to this list that is not yet awesome?
+* Tell people you are working on making something on this list awesome?
+* Tell people you have made something on this list awesome already?
+
+Check out our [Contributing Guide] for how to get started.
+
+[Contributing Guide]: CONTRIBUTING.md
+
 ## Table of contents
 
 ## License
 
-The Embedded Rust Patterns Book (this project) is distributed under the terms of the Creative Commons [CC-BY-SA v4.0] license.
+The Not Yet Awesome Embedded Rust list (this project) is distributed under the terms of the Creative Commons [CC-BY-SA v4.0] license.
 
 Copies of the license used by this project may also be found here: [CC-BY-SA v4.0 Hosted].
 
