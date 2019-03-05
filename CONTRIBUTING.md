@@ -31,7 +31,7 @@ If you've started addressing one of the items on the Not Yet Awesome Embedded Ru
 
 You can let people know you are working on something by [editing the readme][edit the README], and adding a link to your project. Before adding your project, you should make sure that it meets all the following criteria:
 
-1. You should link to the source project on GitHub/GitLab/etc. Your project must be open source
+1. You should link to the source project on GitHub/GitLab/etc. The source of your project must be publically available.
 2. You should state whether outside contributions are welcome
 3. Your project must be relevant to the TODO item it addresses
 4. Your project must be more than just an empty repo or a placeholder (e.g. just a "hello world" `bin.rs`/`lib.rs` is not enough!)
