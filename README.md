@@ -2,13 +2,13 @@
 
 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 
-This is a collection of things that are **not yet** awesome in Embedded Rust.
+This is a collection of things that are **not yet** awesome in Embedded Rust. We need your help to capture all of the things that are not yet awesome, and to start making them awesome!
 
 [<img src="ewg-logo-blue-white-on-transparent-256x256.png" align="right" width="256">](https://github.com/rust-embedded/wg)
 
 This project is developed and maintained by the [Resources team][team].
 
-Interested in:
+Are you interested in:
 
 * Adding something to this list that is not yet awesome?
 * Tell people you are working on making something on this list awesome?
@@ -18,7 +18,15 @@ Check out our [Contributing Guide] for how to get started.
 
 [Contributing Guide]: CONTRIBUTING.md
 
-## The List Template
+## Table of Contents
+
+* Useful Links
+    * [Contributing Guide]
+    * [Item Template](https://github.com/rust-embedded/not-yet-awesome-embedded-rust#not-yet-awesome-item-template)
+* Not Yet Awesome List
+    * [nothing yet...](#)
+
+## Not Yet Awesome Item Template
 
 Here's an example for something that is not yet awesome:
 
