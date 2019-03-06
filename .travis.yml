@@ -1,7 +1,7 @@
 language: rust
 
 script:
-  - true
+  - false
 
 branches:
   only:

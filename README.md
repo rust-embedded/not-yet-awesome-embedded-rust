@@ -1,6 +1,5 @@
 # Not *Yet* Awesome Embedded Rust
 
-
 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 
 This is a collection of things that are **not yet** awesome in Embedded Rust. We need your help to capture all of the things that are not yet awesome, and to start making them awesome!
