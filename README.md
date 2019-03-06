@@ -27,8 +27,51 @@ Check out our [Contributing Guide] for how to get started.
     * [nothing yet...](#)
 
 # The List
+## Tooling ##
 
-Nothing here yet...
+### Register map over protocol code generator ###
+Often a MCU is connected to other devices (IC's) with protocols like I2C and SPI. These devices have their own register map. Register access for read and write is done together with providing the right address. Often these register maps are specified in datasheets (as PDF) and it's then left up to the programmar to implement everything in code. Sometimes C files are provided as well.
+
+This proposal is for a tool that can generate code for these register accesses. Ideally this should work for multiple protocols. Therefor it would be good to consider design for I2C and SPI (one of the two most common protocols) with each step of the implementation.
+
+### Implementation ###
+Proposed steps:
+
+1. Manually write types that specify registers (for a particular device as test), the definition should have at least the following properties:
+  * address
+  * bit offset
+  * length (in bits)
+  * access type: read and/or write
+  * For more potential properties take a look at https://arm-software.github.io/CMSIS_5/SVD/html/elem_registers.html
+2. Write an abstraction for SPI and I2C that works together with these types. It would be good if this works together with embedded-hal
+  * SPI: https://github.com/rust-embedded/embedded-hal/blob/master/src/blocking/spi.rs
+  * I2C: https://github.com/rust-embedded/embedded-hal/blob/master/src/blocking/i2c.rs
+
+    Note that the current embedded-hal code might not support this right now.
+3. Probably now is a good moment to test and discuss the progress so far.
+4. Construct (static) rust AST. [syn](https://github.com/dtolnay/syn) is recommended because svd2rust uses it too.
+5. Come up with a register definition format. Possibly similar to [SVD](https://arm-software.github.io/CMSIS_5/SVD/html/index.html). The important thing is the data structure and supported register properties. Best thing would be to create this format as rust types (intermediate representation) instead instead of directly loading from a file. This way additional file format (xml, yaml, csv) can be supported later on.
+5. Now generate code. Investigate if the [code generators of svd2rust](https://github.com/rust-embedded/svd2rust/tree/master/src/generate) can be adapted to generate AST. Else it could be used as inspiration.
+6. Test with another device.
+7. Now would be a good time to reflect on the progress so far and discuss intergration with other rust tools.
+
+Bonus: after establishing a register map format additional things like documentation for your driver and automated tests could be generated as well. An example of automated test could be reading back the value written to a register to verify that there are no problems with the hardware.
+
+### Useful links ###
+* https://arm-software.github.io/CMSIS_5/SVD/html/index.html
+* https://github.com/rust-embedded/svd2rust
+* https://github.com/braun-robotics/rust-dw1000/blob/master/src/ll.rs#L597 (mentioned by hannobraun)
+* https://github.com/dtwood/tm4c-hal/blob/ethernet-draft/tm4c129x-hal/src/edes.rs (mentioned by theJPster)
+* https://github.com/rust-embedded/register-rs#defining-mmio-registers (mentioned by japaric)
+* https://github.com/rust-embedded/embedded-hal
+
+## Displays and GUI ##
+
+### LittlevGL GUI ###
+There is a really nice Open-source Embedded GUI Library written in C. All it needs is bindings for rust.
+
+* https://github.com/littlevgl/lvgl
+* https://github.com/rust-lang/rust-bindgen
 
 # Not Yet Awesome Item Template
 
