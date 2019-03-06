@@ -18,6 +18,10 @@ Check out our [Contributing Guide] for how to get started.
 
 [Contributing Guide]: CONTRIBUTING.md
 
+And don't forget to check our [Awesome Embedded Rust][aer] list! The thing you are looking for may already exist!
+
+[aer]: https://github.com/rust-embedded/awesome-embedded-rust
+
 ## Table of Contents
 
 * Useful Links
