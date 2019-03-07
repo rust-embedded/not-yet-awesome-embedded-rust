@@ -28,7 +28,7 @@ And don't forget to check our [Awesome Embedded Rust][aer] list! The thing you a
     * [Contributing Guide]
     * [Item Template](#not-yet-awesome-item-template)
 * Not Yet Awesome List
-    * [nothing yet...](#sharing-data-with-interrupts)
+    * [Sharing Data With Interrupts](#sharing-data-with-interrupts)
 
 # The List
 
@@ -68,8 +68,8 @@ We should be able to serve the three use cases listed above, while:
 * Using only safe Rust (at least as a user of the library)
 * Add only minimal overhead, if not "zero cost"
 
-<! -- TODO: Uncomment when there is work in progress -->
-<! -- ### Work in progress -- >
+<!-- TODO: Uncomment when there is work in progress -->
+<!-- ### Work in progress -->
 
 # Not Yet Awesome Item Template
 
