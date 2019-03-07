@@ -26,13 +26,50 @@ And don't forget to check our [Awesome Embedded Rust][aer] list! The thing you a
 
 * Useful Links
     * [Contributing Guide]
-    * [Item Template](https://github.com/rust-embedded/not-yet-awesome-embedded-rust#not-yet-awesome-item-template)
+    * [Item Template](#not-yet-awesome-item-template)
 * Not Yet Awesome List
-    * [nothing yet...](#)
+    * [nothing yet...](#sharing-data-with-interrupts)
 
 # The List
 
-Nothing here yet...
+## Sharing Data With Interrupts
+
+### Background
+
+Currently, it is not convenient to share data with an interrupt using safe Rust. Because interrupt handlers are functions that take no arguments, all data consumed by interrupts must either be local `static` variables, or global `static` variables.
+
+Global variables are not great in Rust, because:
+
+* All mutable access must be `unsafe`
+* Not all data can be initialized in a `const` context, so it's often necessary to use an `Option<T>`
+* Global variables aren't typically idiomatic Rust.
+
+Tools like [cortex-m-rtfm] achieve this in a zero cost fashion by using a Domain Specific Language to automatically provide safe access to shared resources between tasks and interrupts, however these tools can not be used by applications not using RTFM, or by libraries such as HAL or BSP crates.
+
+**Useful Links**
+
+* [wg#294] - An Embedded-WG issue discussing this topic
+* [bare-metal#15] - One proposed solution hiding the un-idiomatic syntax
+
+[wg#294]: https://github.com/rust-embedded/wg/issues/294
+[bare-metal#15]: https://github.com/japaric/bare-metal/pull/15
+[cortex-m-rtfm]: https://github.com/japaric/cortex-m-rtfm
+
+### Success Criteria
+
+Ideally, we would be able to support all of the following use cases:
+
+1. Sharing a variable between the main thread and only one interrupt handler
+2. Sharing a variable between the main thread and one or more interrupt handlers
+3. Moving a variable from the main thread to one interrupt handler
+
+We should be able to serve the three use cases listed above, while:
+
+* Using only safe Rust (at least as a user of the library)
+* Add only minimal overhead, if not "zero cost"
+
+<! -- TODO: Uncomment when there is work in progress -->
+<! -- ### Work in progress -- >
 
 # Not Yet Awesome Item Template
 
