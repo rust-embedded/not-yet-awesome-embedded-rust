@@ -36,15 +36,15 @@ And don't forget to check our [Awesome Embedded Rust][aer] list! The thing you a
 
 ### Background
 
-Currently, it is not convenient to share data with an interrupt using safe Rust. Because interrupt handlers are functions that take no arguments, all data consumed by interrupts must either be local `static` variables, or global `static` variables.
+Currently, it is not convenient to share non-atomic data with an interrupt using safe Rust. Because interrupt handlers are functions that take no arguments, all data consumed by interrupts must either be Atomic (e.g. `AtomicBool`), local `static` variables, or global or module scoped `static` variables.
 
 Global variables are not great in Rust, because:
 
 * All mutable access must be `unsafe`
-* Not all data can be initialized in a `const` context, so it's often necessary to use an `Option<T>`
+* Not all data can be initialized in a `const` context, so it's often necessary to use an `Option<T>` to delay the initialization at runtime
 * Global variables aren't typically idiomatic Rust.
 
-Tools like [cortex-m-rtfm] achieve this in a zero cost fashion by using a Domain Specific Language to automatically provide safe access to shared resources between tasks and interrupts, however these tools can not be used by applications not using RTFM, or by libraries such as HAL or BSP crates.
+Frameworks like [cortex-m-rtfm] achieve this in a zero cost fashion by using a Domain Specific Language to automatically provide safe access to shared resources between tasks and interrupts, however these tools can not be used by applications not using RTFM, or by libraries such as HAL or BSP crates.
 
 **Useful Links**
 
