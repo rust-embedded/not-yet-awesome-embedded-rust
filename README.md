@@ -32,7 +32,14 @@ And don't forget to check our [Awesome Embedded Rust][aer] list! The thing you a
 
 # The List
 
-Nothing here yet...
+## Calculations / Analysis ##
+
+### Tensorflow ###
+It would be nice to have bindings to the tensorflow library.
+
+#### Useful links ####
+* https://github.com/tensorflow/tensorflow/tree/master/tensorflow/lite/experimental/micro
+* https://techerati.com/news-hub/tensorflow-can-now-run-on-12-edge-hardware/
 
 # Not Yet Awesome Item Template
 
