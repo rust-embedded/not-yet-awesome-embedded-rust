@@ -71,6 +71,51 @@ We should be able to serve the three use cases listed above, while:
 <!-- TODO: Uncomment when there is work in progress -->
 <!-- ### Work in progress -->
 
+## Serialization/Deserialization in `no_std`
+
+### Background
+
+For embedded systems that send or receive data to other devices, or who read/write data to a medium such as an SD card or other Flash memory, it is useful to have automatic serialization and deserialization support to turn structured data into a binary format.
+
+While tools like [`serde`] are widely used in Rust (and already support `no_std`), few of the the frontends (like [`serde_json`]) are supported in a `no_std` environment.
+
+[`serde`]: https://github.com/serde-rs/serde
+[`serde_json`]: https://github.com/serde-rs/json
+[`ssmarshal`]: https://gitlab.com/robigalia/ssmarshal
+[`ujson`]: https://github.com/japaric/jnet/tree/master/ujson
+[`bincode-no-std`]: https://github.com/losfair/bincode
+[`cbor-no-std`]: https://crates.io/crates/cbor-no-std
+
+### Success Criteria
+
+We should be able to serialize and deserialize data in an automatic way, either using a frontend like [`serde`], or with a simple and convenient `serialize` and `deserialize` method. To use these, we should not need heap allocations, and it should be possible to detect when serialization and deserialization have failed.
+
+Additionally, all common datatypes used in embedded Rust should be supported, as well as a (preferrably automatic) way to add support for custom data types. Common data types include:
+
+* Fixed point signed/unsigned numbers like `u8..u64` or `i8..i64`
+* Floating point numbers like `f32..f64`
+* Booleans
+* Variable length types, like `[u8]` and `&str`
+* Tuples
+* Enumerated types
+
+We should also have support for different ways of serializing data, primarily:
+
+* Self-describing schemas, such as JSON or CBOR
+* Non-self-describing schemas, such as binary packed data or ProtoBufs
+
+### Work in progress
+
+* [`serde`] already has support for `no_std` environments, when using a feature flag
+    * Serde welcomes [contributions](https://github.com/serde-rs/json/blob/master/CONTRIBUTING.md)
+* [`ssmarshal`] has support for basic types, but does not support enums with more than 255 variants, or variable sized types like slices. This covers only the non-self-describing use case.
+    * ssmarshal welcomes [contributions](https://gitlab.com/robigalia/ssmarshal/blob/master/CONTRIBUTING.md)
+* [`ujson`] supports JSON serialization and deserialization for `no_std` environments, but is experimental (and not on crates.io), and is unlikely to be stabilized as-is
+    * It is unknown if ujson welcomes contributions
+* There are a number of forks of `std`-only `serde` backends, though they do not seem to have official support from the upstream libraries. These forks include:
+    * [`bincode-no-std`]
+    * [`cbor-no-std`]
+
 # Not Yet Awesome Item Template
 
 Here's an example for something that is not yet awesome:
