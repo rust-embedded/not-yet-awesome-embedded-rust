@@ -29,6 +29,7 @@ And don't forget to check our [Awesome Embedded Rust][aer] list! The thing you a
     * [Item Template](#not-yet-awesome-item-template)
 * Not Yet Awesome List
     * [Sharing Data With Interrupts](#sharing-data-with-interrupts)
+    * [Serialization/Deserialization in `no_std`](#serializationdeserialization-in-no_std)
 
 # The List
 
