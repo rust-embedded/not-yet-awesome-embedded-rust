@@ -77,7 +77,7 @@ We should be able to serve the three use cases listed above, while:
 
 For embedded systems that send or receive data to other devices, or who read/write data to a medium such as an SD card or other Flash memory, it is useful to have automatic serialization and deserialization support to turn structured data into a binary format.
 
-While tools like [`serde`] are widely used in Rust (and already support `no_std`), few of the the frontends (like [`serde_json`]) are supported in a `no_std` environment.
+While tools like [`serde`] are widely used in Rust (and already support `no_std`), few of the the backends (like [`serde_json`]) are supported in a `no_std` environment.
 
 [`serde`]: https://github.com/serde-rs/serde
 [`serde_json`]: https://github.com/serde-rs/json
