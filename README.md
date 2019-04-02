@@ -30,6 +30,7 @@ And don't forget to check our [Awesome Embedded Rust][aer] list! The thing you a
 * Not Yet Awesome List
     * [Sharing Data With Interrupts](#sharing-data-with-interrupts)
     * [Serialization/Deserialization in `no_std`](#serializationdeserialization-in-no_std)
+    * [Support crates for USB Host and USB Device Support](#support-crates-for-usb-host-and-usb-device-support)
 
 # The List
 
@@ -116,6 +117,21 @@ We should also have support for different ways of serializing data, primarily:
 * There are a number of forks of `std`-only `serde` backends, though they do not seem to have official support from the upstream libraries. These forks include:
     * [`bincode-no-std`]
     * [`cbor-no-std`]
+
+## Support crates for USB Host and USB Device Support
+
+### Background
+
+The USB standard has a fair bit of commonality between USB Devices (like Mice, Printers, and Webcams) and USB Hosts (like Laptops and Raspberry Pis), but each specific microcontroller has a slightly different implementation of the USB Controller at the bottom of the stack. It would make bringing up a USB stack on a new chip much easier if there was a `#[no_std]` crate which defined some common traits, enumerations and structures at the bottom, and then provided support for various device classes above that.
+
+### Success Criteria
+
+I'd like to be able to implement USB Host and USB Device support on the Texas Instruments Tiva-C line and the STM32F4 line by only implementing a thin shim around each device's USB OTG Controller registers. The USB Host should be able to handle a USB Keyboard and the USB Device should enumerate as a Communications Class Device (two of the most common use-cases).
+
+### Work in progress
+
+* The [tm4c123x-hal](https://crates.io/crates/tm4c123x-hal) crate has svd2rust definitions for the USB controller's registers.
+* There is a [branch](https://github.com/thejpster/tm4c-hal/tree/usb_host_support/tm4c123x-hal) looking at adding USB Host support.
 
 # Not Yet Awesome Item Template
 
