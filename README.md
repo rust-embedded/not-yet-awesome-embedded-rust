@@ -132,6 +132,7 @@ I'd like to be able to implement USB Host and USB Device support on the Texas In
 
 * The [tm4c123x-hal](https://crates.io/crates/tm4c123x-hal) crate has svd2rust definitions for the USB controller's registers.
 * There is a [branch](https://github.com/thejpster/tm4c-hal/tree/usb_host_support/tm4c123x-hal) looking at adding USB Host support.
+* [usb-device](https://github.com/mvirkkunen/usb-device) crate and corresponding device-specific implementation: [stm32f103xx-usb](https://github.com/mvirkkunen/stm32f103xx-usb).
 
 # Not Yet Awesome Item Template
 
