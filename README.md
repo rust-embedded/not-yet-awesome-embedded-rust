@@ -134,6 +134,21 @@ I'd like to be able to implement USB Host and USB Device support on the Texas In
 * There is a [branch](https://github.com/thejpster/tm4c-hal/tree/usb_host_support/tm4c123x-hal) looking at adding USB Host support.
 * [usb-device](https://github.com/mvirkkunen/usb-device) crate and corresponding device-specific implementation: [stm32f103xx-usb](https://github.com/mvirkkunen/stm32f103xx-usb).
 
+## Display and GUI support
+
+### Background
+
+So far there seem to be no libraries to do anything with displays or gui's. However in C some libraries have already been written. Rust could interface with these libraries if bindings were made.
+
+#### Useful links
+* https://github.com/rust-lang/rust-bindgen to help out making bindings
+* [LittlevGL](https://github.com/littlevgl/lvgl), an Open-source Embedded GUI Library written in C.
+* [GuiLite](https://github.com/idea4good/GuiLite), a small GUI library of 5000 lines of C++ code that runs on all platforms, including MCU's.
+
+### Success Criteria
+
+Bindings to C libraries or a Rust library that is meant for Displays and/or GUIs.
+
 # Not Yet Awesome Item Template
 
 Here's an example for something that is not yet awesome:
