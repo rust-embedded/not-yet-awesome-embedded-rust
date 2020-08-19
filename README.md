@@ -132,7 +132,14 @@ I'd like to be able to implement USB Host and USB Device support on the Texas In
 
 * The [tm4c123x-hal](https://crates.io/crates/tm4c123x-hal) crate has svd2rust definitions for the USB controller's registers.
 * There is a [branch](https://github.com/thejpster/tm4c-hal/tree/usb_host_support/tm4c123x-hal) looking at adding USB Host support.
-* [usb-device](https://github.com/mvirkkunen/usb-device) crate and corresponding device-specific implementation: [stm32f103xx-usb](https://github.com/mvirkkunen/stm32f103xx-usb).
+* [usb-device](https://github.com/mvirkkunen/usb-device) crate and corresponding device-specific implementations for STM32:
+  * [stm32-usbd](https://github.com/stm32-rs/stm32-usbd) (USBFS peripheral in F0, F1, F3, L0, L4 families)
+  * [synopsys-usb-otg](https://github.com/stm32-rs/synopsys-usb-otg) (OTG peripheral in F1, F4, F7, H7 families)
+* [usbd-serial](https://github.com/mvirkkunen/usbd-serial) crate implements USB CDC for serial communication.
+* [usbd-hid](https://github.com/twitchyliquid64/usbd-hid) crate implements USB HID, providing a way to implement
+keyboard and mouse drivers on top of it.
+* [Keyberon](https://github.com/TeXitoi/keyberon) project uses `usb-device` to implement its own HID support for USB keyboard firmware.
+This project usually serves as a starting point for those willing to implement their own USB keyboard firmware.
 
 ## Display and GUI support
 
