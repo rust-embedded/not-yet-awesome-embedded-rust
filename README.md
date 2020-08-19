@@ -138,6 +138,8 @@ I'd like to be able to implement USB Host and USB Device support on the Texas In
 * [usbd-serial](https://github.com/mvirkkunen/usbd-serial) crate implements USB CDC for serial communication.
 * [usbd-hid](https://github.com/twitchyliquid64/usbd-hid) crate implements USB HID, providing a way to implement
 keyboard and mouse drivers on top of it.
+* [Keyberon](https://github.com/TeXitoi/keyberon) project uses `usb-device` to implement its own HID support for USB keyboard firmware.
+This project usually serves as a starting point for those willing to implement their own USB keyboard firmware.
 
 ## Display and GUI support
 
