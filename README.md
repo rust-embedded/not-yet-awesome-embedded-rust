@@ -156,6 +156,30 @@ So far there seem to be no libraries to do anything with displays or gui's. Howe
 
 Bindings to C libraries or a Rust library that is meant for Displays and/or GUIs.
 
+## Add an STM32 board support crate for the STM32H747I-DISCO board
+
+### Background
+
+The only STM32 boars support crates I found where:
+* https://github.com/stm32-rs/stm32f407g-disc
+* https://github.com/stm32-rs/stm32f429i-disc
+* https://github.com/stm32-rs/stm32f072b-disco
+
+The development of the [STM32H747I-DISCO](https://www.st.com/en/evaluation-tools/stm32h747i-disco.html) board would be much more straight forward with a board support crate pulling in all the right drivers. 
+
+Additionally the following might be provided by the board support crate:
+* Feature gates for the different drivers
+** Display
+** Touch
+** Audio
+** Network
+** ...
+* A setup routine that set's up the clock and all enabled peripherals.
+
+### Success Criteria
+
+A repository (maybe https://github.com/stm32-rs/stm32h747i-disco) to add references to drivers to and provide a setup routine. 
+
 # Not Yet Awesome Item Template
 
 Here's an example for something that is not yet awesome:
