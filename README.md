@@ -156,6 +156,9 @@ So far there seem to be no libraries to do anything with displays or gui's. Howe
 
 Bindings to C libraries or a Rust library that is meant for Displays and/or GUIs.
 
+### Work in progress
+* [Rafael Carício](https://github.com/rafaelcaricio) is working on [lvgl-rs](https://github.com/rafaelcaricio/lvgl-rs), which are safe bindings for Rust to use LittlevGL ([see also the annoucement on the LVGL forums](https://forum.lvgl.io/t/rust-bindings-for-littlevgl/2386)). LVGL can now also [compile to WASM](https://github.com/rafaelcaricio/lvgl-rs-wasm) thanks to Rust.
+
 # Not Yet Awesome Item Template
 
 Here's an example for something that is not yet awesome:
