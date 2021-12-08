@@ -46,7 +46,7 @@ Global variables are not great in Rust, because:
 * Not all data can be initialized in a `const` context, so it's often necessary to use an `Option<T>` to delay the initialization to runtime
 * Global variables aren't typically idiomatic Rust.
 
-Frameworks like [cortex-m-rtfm] achieve this in a zero cost fashion by using a Domain Specific Language to automatically provide safe access to shared resources between tasks and interrupts, however these tools can not be used by applications not using RTFM, or by libraries such as HAL or BSP crates.
+Frameworks like [cortex-m-rtic] achieve this in a zero cost fashion by using a Domain Specific Language to automatically provide safe access to shared resources between tasks and interrupts, however these tools can not be used by applications not using RTIC, or by libraries such as HAL or BSP crates.
 
 **Useful Links**
 
@@ -55,7 +55,7 @@ Frameworks like [cortex-m-rtfm] achieve this in a zero cost fashion by using a D
 
 [wg#294]: https://github.com/rust-embedded/wg/issues/294
 [bare-metal#15]: https://github.com/japaric/bare-metal/pull/15
-[cortex-m-rtfm]: https://github.com/japaric/cortex-m-rtfm
+[cortex-m-rtic]: https://github.com/rtic-rs/cortex-m-rtic
 
 ### Success Criteria
 
