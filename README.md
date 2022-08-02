@@ -180,6 +180,10 @@ I'd like to be able to Foo using **only** a Bib, Bim, or Bap.
     * They are looking for contributors (see [issue #1338](#))
     * They have a [Code of Conduct](CODE_OF_CONDUCT.md)
 
+## Websites & Resources
+* [Explore Rust](https://kandi.openweaver.com/explore/rust) - A curated list of Rust libraries, authors, kits, tutorials & learning resources
+
+
 # License
 
 The Not Yet Awesome Embedded Rust list (this project) is distributed under the terms of the Creative Commons [CC-BY-SA v4.0] license.
