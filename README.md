@@ -165,6 +165,7 @@ Bindings to C libraries or a Rust library that is meant for Displays and/or GUIs
 ### Background
 
 There is a large amount of accessible libraries and projects involving the esp32-cam in c++, and a few projects for rust using esp-idf-std (listed below), however there are no no_std crates with this support.
+A repository of information, including pin defintions, can be found (here)[[https://github.com/raphaelbs/esp32-cam-ai-thinker/blob/master/docs/esp32cam-pin-notes.md](https://github.com/raphaelbs/esp32-cam-ai-thinker/tree/master)].
 
 ### Success Criteria
 
