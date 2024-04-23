@@ -160,6 +160,21 @@ Bindings to C libraries or a Rust library that is meant for Displays and/or GUIs
 ### Work in progress
 * [Rafael Carício](https://github.com/rafaelcaricio) is working on [lvgl-rs](https://github.com/rafaelcaricio/lvgl-rs), which are safe bindings for Rust to use LittlevGL ([see also the annoucement on the LVGL forums](https://forum.lvgl.io/t/rust-bindings-for-littlevgl/2386)). LVGL can now also [compile to WASM](https://github.com/rafaelcaricio/lvgl-rs-wasm) thanks to Rust.
 
+## Support for no_std esp32-cam 
+
+### Background
+
+There is a large amount of accessible libraries and projects involving the esp32-cam in c++, and a few projects for rust using esp-idf-std (listed below), however there are no no_std crates with this support.
+A repository of information, including pin defintions, can be found (here)[[https://github.com/raphaelbs/esp32-cam-ai-thinker/blob/master/docs/esp32cam-pin-notes.md](https://github.com/raphaelbs/esp32-cam-ai-thinker/tree/master)].
+
+### Success Criteria
+
+A library with bindings to the esp32-cam camera, accessible in a no_std environment.
+
+### Work in progress
+
+* The [ChenHuaYou/esp-cam-rs](https://github.com/ChenHuaYou/esp-cam-rs) and [Jlocash/esp-camera-rs](https://github.com/jlocash/esp-camera-rs) repositories support esp32-cam using esp-idf-std bindings.
+
 # Not Yet Awesome Item Template
 
 Here's an example for something that is not yet awesome:
