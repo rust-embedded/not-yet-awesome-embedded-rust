@@ -114,9 +114,12 @@ We should also have support for different ways of serializing data, primarily:
     * ssmarshal welcomes [contributions](https://gitlab.com/robigalia/ssmarshal/blob/master/CONTRIBUTING.md)
 * [`ujson`] supports JSON serialization and deserialization for `no_std` environments, but is experimental (and not on crates.io), and is unlikely to be stabilized as-is
     * It is unknown if ujson welcomes contributions
+* [`postcard`](https://github.com/jamesmunns/postcard) provides efficient, heapless, `no_std`-friendly serialization protocol for use in embedded environments.
+    * [`postcard-rpc`](https://github.com/jamesmunns/postcard-rpc) builds on postcard to provide an RPC communciation layer.
 * There are a number of forks of `std`-only `serde` backends, though they do not seem to have official support from the upstream libraries. These forks include:
     * [`bincode-no-std`]
     * [`cbor-no-std`]
+
 
 ## Support crates for USB Host and USB Device Support
 
