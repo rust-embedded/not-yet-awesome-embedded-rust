@@ -1,4 +1,4 @@
-# :info: Archived Repository :info:
+# ℹ️ Archived Repository ℹ️
 
 This archived repository contains old discussions of topics which have been pretty much resolved in the last few years. You are welcome to read it: we would suggest instead checking out [Awesome Embedded Rust](https://github.com/rust-embedded/awesome-embedded-rust) and joining us in our [Rust Embedded Matrix Chat](https://matrix.to/#/#rust-embedded:matrix.org).
 
